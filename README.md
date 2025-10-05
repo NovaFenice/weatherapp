@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# 🌤 Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una moderna applicazione meteo realizzata in **React**, che permette di cercare città in tutto il mondo e visualizzare il meteo attuale e le previsioni dei prossimi giorni in maniera **interattiva e responsive**.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Funzionalità principali**
 
-### `npm start`
+- Ricerca città con suggerimenti automatici usando l’API OpenWeather **Geo API**.  
+- Visualizzazione del meteo attuale con:  
+  - Temperatura cliccabile per convertire tra **Celsius, Fahrenheit e Kelvin**.  
+  - Pressione atmosferica cliccabile tra **hPa, atm e mmHg**.  
+  - Velocità del vento cliccabile tra **m/s e km/h**.  
+  - Umidità, alba e tramonto.  
+  - Icona meteo ufficiale di OpenWeather.  
+- Previsioni meteo dei prossimi giorni con layout **orizzontale e responsive**.  
+- Modalità **Dark/Light** automatica basata sull’orario o selezionabile manualmente.  
+- Design moderno con **card interattive** e **scroll snapping** per il forecast.  
+- Supporto completo per **mobile e desktop**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Screenshot dell’app**
 
-### `npm test`
+### **Dark Mode**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Dark Mode](DarkLightThemes/DarkThemes.png)
 
-### `npm run build`
+### **Light Mode**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Light Mode](DarkLightThemes/LightThemes.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Tecnologie utilizzate**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React  
+- CSS moderno con Flexbox e media queries  
+- OpenWeather API (Current Weather + 5-day Forecast + Geo API)  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## **Installazione e Avvio**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clona la repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/NovaFenice/weatherapp.git
+cd weatherapp
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Installa le dipendenze:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Avvia l'app in modalità sviluppo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+- L'app sarà avviata su ```http://localhost:3000/```
+- Assicurati di avere una chiave API valida di OpenWeather
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Compila per la produzione:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- La cartella ```build/``` conterrà la versione ottimizzata pronta per il deploy
 
-### Making a Progressive Web App
+## **Struttura dei componenti React**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ```App.jsx``` Contiene il tema globale e gestisce la città selezionata.
+- ```SearchBar.jsx``` Barra di ricerca con suggerimenti automatici
+- ```Weather.jsx``` Mostra il meteo attuale della città selezionata
+- ```Forecast.jsx``` Mostra le previsioni dei prossimi giorni in orizzontale
+- CSS dedicati per ciascun componente (```App.css```, ```SearchBar.css```, ```Weather.css```, ```Forecast.css```)
 
-### Advanced Configuration
+## **API Keys**
+- **OpenWeather:** [https://openweathermap.org/api](https://openweathermap.org/api)
+- **Necessarie:** ```Current Weather, Forecast 5 giorni e Geo API```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **Contributi**
+- Contributi e suggerimenti sono benvenuti!
+- Apri una pull request o segnala un issue per miglioramenti o bug

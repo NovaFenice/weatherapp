@@ -27,9 +27,9 @@ function Weather({ city, theme }) {
     }, [city]);
 
     const convertTemp = (tempC) => {
-        if (tempUnit === 'C') return `${Math.round(tempC)}°C`;
-        if (tempUnit === 'F') return `${Math.round((tempC * 9) / 5 + 32)}°F`;
-        return `${Math.round(tempC + 273.15)}K`;
+        if (tempUnit === 'C') return `${Math.round(tempC)} °C`;
+        if (tempUnit === 'F') return `${Math.round((tempC * 9) / 5 + 32)} °F`;
+        return `${Math.round(tempC + 273.15)} K`;
     };
 
     const convertWind = (speed) => {
