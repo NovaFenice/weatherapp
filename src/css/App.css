@@ -1,0 +1,96 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1a1a2e;
+  color: white;
+}
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 40px;
+  box-shadow: inset 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.Main.dark {
+  background-color: #1a1a2e;
+  color: #fff;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.Main.light {
+  background-color: #f0f0f0;
+  color: #000;
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+  margin-bottom: 20px;
+}
+
+.theme-toggle button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle button:hover {
+  transform: scale(1.05);
+}
+
+.Main.dark .theme-toggle button {
+  background-color: #333;
+  color: #fff;
+}
+
+.Main.light .theme-toggle button {
+  background-color: #ddd;
+  color: #000;
+}
+
+.theme-toggle .icon {
+  font-size: 20px;
+}
+
+.Main.dark .theme-toggle .icon {
+  color: #ffd700;
+}
+
+.Main.light .theme-toggle .icon {
+  color: #1a1a2e;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Main > * {
+  animation: fadeInUp 0.4s ease;
+}
